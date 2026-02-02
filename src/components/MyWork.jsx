@@ -10,19 +10,22 @@ const MyWork = () => {
       {
         title: "Nike Website Clone", 
         description: "I Have Replicated a Nike Website Using React", 
-        image: assets.nike2front
+        image: assets.nike2front, 
+        url: "https://nike-frontend-khaki.vercel.app/"
       }, 
 
       {
         title: "Space-X Website",
         description: "I Built a Space-X Website Clone Using HTML, CSS & JS", 
-        image: assets.spacex
+        image: assets.spacex, 
+        url: "https://space-x-website-ten.vercel.app/"
       }, 
 
       {
         title: "A CRUD APP", 
         description: "I Have Built a CRUD App Using the MERN Stack", 
-        image: assets.backendtest2
+        image: assets.backendtest2, 
+        url: "https://e-commerce-fullstack-xh5k.onrender.com/"
       }
    ];
 
@@ -36,6 +39,7 @@ const MyWork = () => {
         content="Explore my portfolio of web development projects, including responsive websites and interactive applications built with modern technologies." />
     </Helmet>
 
+    
     <motion.div
      initial = "hidden"
      whileInView = "visible"
@@ -48,6 +52,12 @@ const MyWork = () => {
         <div className='grid sm:grid-cols-3 lg:grid-cols-3 gap-6 w-full max-w-5xl'>
              {
                 workData.map((work, index) => (
+
+                  <a
+                   href = {work.url}
+                   target = "_blank"
+                   rel= "noopener noreferrer"
+                  >
                     <motion.div
                  initial = {{opacity:0, y:30}}
                  whileInView={{opacity: 1, y:0}}
@@ -58,6 +68,7 @@ const MyWork = () => {
                      <h3 className='mt-3 mb-2 text-lg font-semibold'> {work.title} </h3>
                      <p className='text-sm opacity-60 w-5/6'> {work.description} </p>
                  </motion.div>
+                 </a>
                 ))
              }
         </div>
