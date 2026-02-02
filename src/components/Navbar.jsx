@@ -35,7 +35,7 @@ const Navbar = ({theme, setTheme}) => {
          <a href="#" className="sm:hover:border-b">Home</a> 
          <a href="#services" className="sm:hover:border-b">Services</a> 
          <a href="#my-work" className="sm:hover:border-b">My Work</a>
-         <a href="#contact-us" className="sm:hover:border-b">Contact Us </a>
+         <a href="#contact-us" className="sm:hover:border-b">Contact Me </a>
      </div>
 
      <div className='flex items-center gap-2 sm:gap-4'>
